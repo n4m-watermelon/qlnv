@@ -3,10 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Provider } from 'react-redux'
+import {createStore} from 'redux'
+import rootReducer from './reducers/rootReducers'
+const store = createStore(rootReducer)
+store.subscribe( ()=>{
+  
+  const statusLogin = store.getState()
+  localStorage.setItem('statusLogin' , JSON.stringify(statusLogin.loginReducer))
+  console.log(statusLogin)
+})
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <Provider store={store}>
+   <App />
+  </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
