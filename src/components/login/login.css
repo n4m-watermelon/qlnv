@@ -1,50 +1,77 @@
-.wrap{
+
+.background_contain{
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: rgb(94,90,154);
+    background: linear-gradient(36deg, rgba(94,90,154,1) 0%, rgba(55,143,90,1) 40%, rgba(0,212,255,1) 100%);
+    position: relative;
+    z-index: 1;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+     background-color: rgb(37,166,144) !important;
+     border-color: rgb(37,166,144) !important;
+}
+.ant-checkbox-inner {
+    border-color: rgb(37,166,144) !important;
+}
+.background_contain::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(https://colorlib.com/etc/lf/Login_v11/images/img-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrap_container{
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    width: 320px;
+    margin: 0 auto;
     display:  flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     flex-direction: column;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%) ;
-    -webkit-transform: translate(-50%,-50%) ;
-    -moz-transform: translate(-50%,-50%) ;
-    -ms-transform: translate(-50%,-50%) ;
-    -o-transform: translate(-50%,-50%) ;
-    width: 70%;
-    height: 350px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* margin-top: 30vh; */
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 3px;
 }
 
 
-.bg_cover{
-    width: 65%;
-    background-image: url(../../medias/bg_login.png);
-    background-size: cover;
-    height: 100%;
+.wrap_container .form_login{
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-
-.form_login{
-    width: 35%;
-    height: 100%;
-    background: rgba(0, 0, 0, .8);
-    padding: 15px 15px;
-    color: white;
+.wrap_container .form_login h6 {
+  text-transform: uppercase;
+  font-weight: bold;    
 }
-
-.form_login h1{
-    letter-spacing: 2px;
+.wrap_container .btn{
+    width:100%;
+    background-color: rgb(37,166,144) !important;
+    border-color: rgb(37,166,144) !important;
 }
-
-.btn_custom{
-    background: tomato !important;
-    border: none !important;
-    width: 100% !important;
-    border-radius: 7px !important;
-    -webkit-border-radius: 7px !important;
-    -moz-border-radius: 7px !important;
-    -ms-border-radius: 7px !important;
-    -o-border-radius: 7px !important;
+.ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused {
+    border-color: rgb(37,166,144) !important;
+}
+.sub_title{
+    font-weight: 500;
+    margin: 0;
 }

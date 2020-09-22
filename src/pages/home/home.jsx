@@ -1,8 +1,10 @@
 import React from "react";
 import { Jumbotron, Container } from "reactstrap";
-function home(props) {
+import TopMenu from '../../components/topMenu/topMenu'
+function Home(props) {
   return (
     <div>
+         {/* <TopMenu /> */}
       <Jumbotron fluid>
         <Container fluid>
           <h1 className="display-3">Some content !</h1>
@@ -13,4 +15,4 @@ function home(props) {
   );
 }
 
-export default home;
+export default Home;

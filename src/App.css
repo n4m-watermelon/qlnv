@@ -2,3 +2,30 @@
 button:focus{
     outline: auto;
 }
+body{
+    background: #F4F6F9 !important;
+}
+ /* .btn_pagi svg {
+    margin-bottom: 5px;
+} */
+.modal_cus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.pagination_hidden .ant-table-pagination.ant-pagination {
+
+    display: none;
+}
+.header_img{
+    display: flex;
+    /* align-items: center; */
+    justify-items: center;
+}
+
+
+.ant-upload-picture-card-wrapper {
+    
+    width: auto !important;
+}

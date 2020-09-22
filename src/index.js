@@ -3,20 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import {Provider } from 'react-redux'
 import {createStore} from 'redux'
 import rootReducer from './reducers/rootReducers'
 const store = createStore(rootReducer)
 store.subscribe( ()=>{
   
-  const statusLogin = store.getState()
-  localStorage.setItem('statusLogin' , JSON.stringify(statusLogin.loginReducer))
-  console.log(statusLogin)
+  // const statusLogin = store.getState()
+  // localStorage.setItem('statusLogin' , JSON.stringify(statusLogin.loginReducer))
+  // console.log(statusLogin)
 })
 ReactDOM.render(
   <React.StrictMode>
-     <Provider store={store}>
+    <Provider store={store}>
    <App />
   </Provider>
   </React.StrictMode>,

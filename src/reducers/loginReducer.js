@@ -1,14 +1,30 @@
 const initState = JSON.parse(localStorage.getItem("statusLogin")) || false;
 
-const loginReducer = (state = initState, { type }) => {
+
+const initStateLogin = {
+
+  user_info:{},
+  isLogin:false
+
+}
+
+const loginReducer = (state = initStateLogin, { type, payload }) => {
   switch (type) {
     case "LOGIN":
-      const statusLogin = !state;
-      return statusLogin;
+      
+      return {
+        ...state,
+        isLogin:true,
+        user_info: payload
+      };
     case "LOGOUT":
-      localStorage.clear()  
-      const isLogout = !state;
-      return isLogout;
+    
+      return {
+        ...state,
+        isLogin:false,
+        user_info:{}
+        
+      };
     default:
       return state;
   }
